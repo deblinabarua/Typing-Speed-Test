@@ -25,10 +25,10 @@ class Game:
         self.result_c = (255,70,70)
 
         pygame.init() #Initialize all imported pygame modules
-        self.open_img = pygame.image.load(r"C:\Users\HP\Downloads\Loading.png")
+        self.open_img = pygame.image.load(r"Loading.png")
         self.open_img = pygame.transform.scale(self.open_img,(self.width,self.height)) #Resizes the image to a new resolution
 
-        self.bg = pygame.image.load(r"C:\Users\HP\Downloads\Background.png")
+        self.bg = pygame.image.load(r"Background.png")
         self.bg = pygame.transform.scale(self.bg,(1200,600))
 
         self.screen=pygame.display.set_mode((self.width,self.height)) #Creates a window where the game will function
@@ -66,7 +66,7 @@ class Game:
 
             self.results = 'Time: ' + str(round(self.total_time)) + " secs    Accuracy:" + str(round(self.accuracy)) + "%    wpm: " + str(round(self.wpm))
 
-            self.time_img = pygame.image.load(r"C:\Users\HP\Downloads\Reset.png")
+            self.time_img = pygame.image.load(r"Reset.png")
             self.time_img = pygame.transform.scale(self.time_img,(150,150))
             screen.blit(self.time_img,(self.width/2-75,self.height-140))
             self.draw_text(screen,"Reset",self.height-70,26,(100,100,100))
